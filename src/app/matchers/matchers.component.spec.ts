@@ -25,4 +25,11 @@ describe('MatchersComponent', () => {
     expect(true).toEqual(true);
     expect([1,2,3]).toEqual([1,2,3])
   });
+
+  it('should test the use of matcher toBe', () => {
+    let numero = 10;
+    let nome = 'Jean';
+    expect(numero).toBe(10);
+    expect(nome).toBe('Jean');
+  });
 });
