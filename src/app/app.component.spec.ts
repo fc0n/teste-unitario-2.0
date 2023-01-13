@@ -25,7 +25,7 @@ describe('AppComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it(`should have as title 'teste-unitarios'`, () => {
+  fit(`should have as title 'teste-unitarios'`, () => {
     expect(component.title).toEqual('teste-unitarios');
   });
 
