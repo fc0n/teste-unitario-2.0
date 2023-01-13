@@ -9,6 +9,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class FixProblemsComponent implements OnInit {
 
   form!: FormGroup;
+  price: number = 0;
 
   constructor(private fb: FormBuilder) { 
     this.form = this.fb.group({
