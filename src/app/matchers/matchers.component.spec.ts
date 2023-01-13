@@ -50,4 +50,8 @@ describe('MatchersComponent', () => {
   it('should test the use of matcher toBeTrue', () => {
     expect(true).toBeTrue();
   });
+
+  it('should test the use of matcher toBeFalse', () => {
+    expect(false).toBeFalse();
+  });
 });
