@@ -54,4 +54,8 @@ describe('MatchersComponent', () => {
   it('should test the use of matcher toBeFalse', () => {
     expect(false).toBeFalse();
   });
+
+  it('should test the use of matcher not', () => {
+    expect("Jean").not.toEqual("Julia");
+  });
 });
