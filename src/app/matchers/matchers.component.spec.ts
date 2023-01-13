@@ -39,4 +39,11 @@ describe('MatchersComponent', () => {
     expect({}).toBeTruthy();
     expect([]).toBeTruthy();
   });
+
+  it('should test the use of matcher toBeFasly', () => {
+    expect("").toBeFalsy();
+    expect(null).toBeFalsy();
+    expect(NaN).toBeFalsy();
+    expect(undefined).toBeFalsy();
+  });
 });
