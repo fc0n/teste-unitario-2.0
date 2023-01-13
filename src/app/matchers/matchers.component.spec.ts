@@ -32,4 +32,11 @@ describe('MatchersComponent', () => {
     expect(numero).toBe(10);
     expect(nome).toBe('Jean');
   });
+
+  it('should test the use of matcher toBeTruthy', () => {
+    expect(true).toBeTruthy();
+    expect(10).toBeTruthy();
+    expect({}).toBeTruthy();
+    expect([]).toBeTruthy();
+  });
 });
