@@ -46,4 +46,8 @@ describe('MatchersComponent', () => {
     expect(NaN).toBeFalsy();
     expect(undefined).toBeFalsy();
   });
+
+  it('should test the use of matcher toBeTrue', () => {
+    expect(true).toBeTrue();
+  });
 });
