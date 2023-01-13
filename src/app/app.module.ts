@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FixProblemsComponent } from './fix-problems/fix-problems.component';
 import { DebuggerTestsComponent } from './debugger-tests/debugger-tests.component';
+import { MatchersComponent } from './matchers/matchers.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FixProblemsComponent,
     DebuggerTestsComponent,
+    MatchersComponent,
   ],
   imports: [
     BrowserModule,
