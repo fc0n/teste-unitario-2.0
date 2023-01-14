@@ -67,12 +67,12 @@ describe('MatchersComponent', () => {
   it('should test the use of matcher toBeDefined', () => {
     let name;
     name = 'Jean';
-    expect(name).toBeDefined(name);
+    expect(name).toBeDefined();
   });
 
   it('should test the use of matcher toBeUndefined', () => {
     let name;
-    expect(name).toBeUndefined(name);
+    expect(name).toBeUndefined();
   });
 
   it('should test the use of matcher toBeNull', () => {
