@@ -63,4 +63,10 @@ describe('MatchersComponent', () => {
     expect('Marvel').toContain('Marv');
     expect([1,2,3]).toContain(1);
   });
+
+  it('should test the use of matcher toBeDefined', () => {
+    let name;
+    name = 'Jean';
+    expect(name).toBeDefined(name);
+  });
 });
