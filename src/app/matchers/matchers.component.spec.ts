@@ -69,4 +69,9 @@ describe('MatchersComponent', () => {
     name = 'Jean';
     expect(name).toBeDefined(name);
   });
+
+  it('should test the use of matcher toBeUndefined', () => {
+    let name;
+    expect(name).toBeUndefined(name);
+  });
 });
