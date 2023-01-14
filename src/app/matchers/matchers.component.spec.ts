@@ -82,4 +82,8 @@ describe('MatchersComponent', () => {
   it('should test the use of matcher toBeGreaterThan', () => {
     expect(10).toBeGreaterThan(1);
   });
+
+  it('should test the use of matcher toBeLessThan', () => {
+    expect(10).toBeLessThan(20);
+  });
 });
