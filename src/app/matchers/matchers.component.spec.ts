@@ -86,4 +86,8 @@ describe('MatchersComponent', () => {
   it('should test the use of matcher toBeLessThan', () => {
     expect(10).toBeLessThan(20);
   });
+
+  it('should test the use of matcher toBeCloseTo', () => {
+    expect(35.20).toBeCloseTo(35.2, 1);
+  });
 });
