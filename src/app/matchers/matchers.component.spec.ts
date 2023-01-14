@@ -94,4 +94,10 @@ describe('MatchersComponent', () => {
   it('should test the use of matcher toMatch', () => {
     expect('Marvel').toMatch(/M/);
   });
+
+  it('should test the use of matcher toThrow', () => {
+    expect(function (){
+      throw new Error('error');
+    }).toThrow()
+  });
 });
