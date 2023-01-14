@@ -74,4 +74,8 @@ describe('MatchersComponent', () => {
     let name;
     expect(name).toBeUndefined(name);
   });
+
+  it('should test the use of matcher toBeNull', () => {
+    expect(null).toBeNull();
+  });
 });
