@@ -90,4 +90,8 @@ describe('MatchersComponent', () => {
   it('should test the use of matcher toBeCloseTo', () => {
     expect(35.20).toBeCloseTo(35.2, 1);
   });
+
+  it('should test the use of matcher toMatch', () => {
+    expect('Marvel').toMatch(/M/);
+  });
 });
