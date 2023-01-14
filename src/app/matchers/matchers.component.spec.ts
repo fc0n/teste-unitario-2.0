@@ -58,4 +58,9 @@ describe('MatchersComponent', () => {
   it('should test the use of matcher not', () => {
     expect("Jean").not.toEqual("Julia");
   });
+
+  it('should test the use of matcher toContain', () => {
+    expect('Marvel').toContain('Marv');
+    expect([1,2,3]).toContain(1);
+  });
 });
