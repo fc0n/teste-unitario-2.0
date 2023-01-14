@@ -79,7 +79,7 @@ describe('MatchersComponent', () => {
     expect(null).toBeNull();
   });
 
-  it('should test the use of matcher toBeNaN', () => {
-    expect(NaN).toBeNaN();
+  it('should test the use of matcher toBeGreaterThan', () => {
+    expect(10).toBeGreaterThan(1);
   });
 });
