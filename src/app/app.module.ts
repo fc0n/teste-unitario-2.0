@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,7 @@ import { MatchersComponent } from './matchers/matchers.component';
 import { StubComponent } from './stub/stub.component';
 import { HomeComponent } from './home/home.component';
 import { SpyonComponent } from './spyon/spyon.component';
+import { RequestComponent } from './request/request.component';
 
 @NgModule({
   declarations: [
@@ -20,12 +22,14 @@ import { SpyonComponent } from './spyon/spyon.component';
     StubComponent,
     HomeComponent,
     SpyonComponent,
+    RequestComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
