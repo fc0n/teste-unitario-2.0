@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { FixProblemsComponent } from './fix-problems/fix-problems.component';
 import { DebuggerTestsComponent } from './debugger-tests/debugger-tests.component';
 import { MatchersComponent } from './matchers/matchers.component';
+import { StubComponent } from './stub/stub.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +16,8 @@ import { MatchersComponent } from './matchers/matchers.component';
     FixProblemsComponent,
     DebuggerTestsComponent,
     MatchersComponent,
+    StubComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
