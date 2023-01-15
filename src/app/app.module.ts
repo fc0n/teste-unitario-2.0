@@ -9,6 +9,7 @@ import { DebuggerTestsComponent } from './debugger-tests/debugger-tests.componen
 import { MatchersComponent } from './matchers/matchers.component';
 import { StubComponent } from './stub/stub.component';
 import { HomeComponent } from './home/home.component';
+import { SpyonComponent } from './spyon/spyon.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { HomeComponent } from './home/home.component';
     MatchersComponent,
     StubComponent,
     HomeComponent,
+    SpyonComponent,
   ],
   imports: [
     BrowserModule,
