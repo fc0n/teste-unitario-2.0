@@ -7,6 +7,7 @@ import { SpyonServiceService } from './spyon-service.service';
 describe('SpyonServiceService', () => {
   let service: SpyonServiceService;
   const logger = jasmine.createSpy("log");
+  const status = jasmine.createSpyObj('service', ['name', 'age', 'email']);
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -35,5 +36,17 @@ describe('SpyonServiceService', () => {
     logger('Loguei no sistema');
     expect(logger).toHaveBeenCalledTimes(1);
     expect(logger).toHaveBeenCalledWith('Loguei no sistema');
+  });
+
+  it('should create method with jasmine.createSpyObj', () => {
+    status.name('Jean');
+    status.email('jean.gabriel@gmail.com');
+    status.age('30');
+    expect(status.name).toHaveBeenCalledTimes(1);
+    expect(status.email).toHaveBeenCalledTimes(1);
+    expect(status.age).toHaveBeenCalledTimes(1);
+    expect(status.name).toHaveBeenCalledWith('Jean');
+    expect(status.email).toHaveBeenCalledWith('jean.gabriel@gmail.com');
+    expect(status.age).toHaveBeenCalledWith('30');
   })
 });
