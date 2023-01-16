@@ -48,4 +48,8 @@ export class RequestComponent implements OnInit {
     return this.http.deleteUser(id).subscribe();
   }
 
+  getUsersWithHeaders() {
+    this.http.getUserWithHeaders().subscribe();
+  }
+
 }

@@ -61,4 +61,10 @@ describe('RequestComponent', () => {
     expect(spiedComponent).toHaveBeenCalledTimes(1);
   });
 
+  it("should call getUsersWithHeaders", () => {
+    let spiedComponent  = spyOn(component, 'getUsersWithHeaders').and.callThrough();
+    component.getUsersWithHeaders();
+    expect(spiedComponent).toHaveBeenCalledTimes(1);
+  });
+
 });

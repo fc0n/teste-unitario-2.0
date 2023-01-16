@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -28,5 +28,13 @@ export class HttpService {
   deleteUser(id: number){
     return this.http.delete(`${this.url}/users/${id}`)
   }
-  
+
+  getUserWithHeaders() {
+    const token = 'wa45a5a45a5a5a4a5a4a5a55a5a5a5a5a5a5a'
+    const headers = new HttpHeaders()
+    .set('content-type', 'application/json')
+    .set('Authorization', `Bearer ${token}`);
+    return this.http.get(`${this.url}/users`, {headers})
+  }
+
 }
