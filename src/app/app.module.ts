@@ -17,6 +17,7 @@ import { AsynchronousComponent } from './asynchronous/asynchronous.component';
 import { TestingComponent } from './testing/testing.component';
 import { FixtureDetectChangeComponent } from './fixture-detect-change/fixture-detect-change.component';
 import { AutoDetectChangeComponent } from './auto-detect-change/auto-detect-change.component';
+import { HandleEventComponent } from './handle-event/handle-event.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { AutoDetectChangeComponent } from './auto-detect-change/auto-detect-chan
     TestingComponent,
     FixtureDetectChangeComponent,
     AutoDetectChangeComponent,
+    HandleEventComponent,
   ],
   imports: [
     BrowserModule,
