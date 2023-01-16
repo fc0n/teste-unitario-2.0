@@ -20,6 +20,8 @@ import { AutoDetectChangeComponent } from './auto-detect-change/auto-detect-chan
 import { HandleEventComponent } from './handle-event/handle-event.component';
 import { FillFormComponent } from './fill-form/fill-form.component';
 import { InputOutputComponent } from './input-output/input-output.component';
+import { TestingPipesDirectiveRouteComponent } from './testing-pipes-directive-route/testing-pipes-directive-route.component';
+import { HttpPipe } from './http.pipe';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,8 @@ import { InputOutputComponent } from './input-output/input-output.component';
     HandleEventComponent,
     FillFormComponent,
     InputOutputComponent,
+    TestingPipesDirectiveRouteComponent,
+    HttpPipe,
   ],
   imports: [
     BrowserModule,
