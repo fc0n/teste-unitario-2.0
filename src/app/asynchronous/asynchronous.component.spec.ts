@@ -107,4 +107,16 @@ describe('AsynchronousComponent', () => {
     })
     expect(loggedOut.textContent).toBe('Deslogado');
   });
+
+  it('should login user with whenStable', async() => {
+    const loggedOut = fixture.debugElement.query(By.css('.logged-out')).nativeElement
+    expect(loggedOut.textContent).toBe('Deslogado');
+    spyOn(http, 'isAuthenticated').and.returnValue(Promise.resolve(true));
+    component.isAuthenticaded();
+    fixture.whenStable().then(() => {
+      fixture.detectChanges();
+      const logged = fixture.debugElement.query(By.css('.logged')).nativeElement
+      expect(logged.textContent).toBe('Logado');
+    })
+  });
 });
