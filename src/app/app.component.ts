@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,7 @@ export class AppComponent implements OnInit {
   title = 'teste-unitarios';
   user: any;
 
-  constructor() {
+  constructor(private router: Router) {
   }
 
   ngOnInit(): void {
@@ -18,5 +19,9 @@ export class AppComponent implements OnInit {
 
   getUserMessage(event: any) {
     console.log('Mensagem do filho: ', event)
+  }
+
+  goTo() {
+    this.router.navigate(['/dashboard'])
   }
 }

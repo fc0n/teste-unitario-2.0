@@ -22,6 +22,8 @@ import { FillFormComponent } from './fill-form/fill-form.component';
 import { InputOutputComponent } from './input-output/input-output.component';
 import { TestingPipesDirectiveRouteComponent } from './testing-pipes-directive-route/testing-pipes-directive-route.component';
 import { HttpPipe } from './http.pipe';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,8 @@ import { HttpPipe } from './http.pipe';
     InputOutputComponent,
     TestingPipesDirectiveRouteComponent,
     HttpPipe,
+    DashboardComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
