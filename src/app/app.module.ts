@@ -14,6 +14,7 @@ import { SpyonComponent } from './spyon/spyon.component';
 import { RequestComponent } from './request/request.component';
 import { MockServiceComponent } from './mock-service/mock-service.component';
 import { AsynchronousComponent } from './asynchronous/asynchronous.component';
+import { TestingComponent } from './testing/testing.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { AsynchronousComponent } from './asynchronous/asynchronous.component';
     RequestComponent,
     MockServiceComponent,
     AsynchronousComponent,
+    TestingComponent,
   ],
   imports: [
     BrowserModule,
