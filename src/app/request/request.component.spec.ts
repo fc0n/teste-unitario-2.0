@@ -54,4 +54,11 @@ describe('RequestComponent', () => {
     expect(spiedComponent).toHaveBeenCalledTimes(1);
   });
 
+  it("should delet a user deleteUser", () => {
+    let spiedComponent  = spyOn(component, 'deleteUser').and.callThrough();
+    const id = 1;
+    component.deleteUser(id);
+    expect(spiedComponent).toHaveBeenCalledTimes(1);
+  });
+
 });

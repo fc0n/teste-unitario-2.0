@@ -107,4 +107,17 @@ describe('HttpService', () => {
     expect(request.request.url).toBe(`${url}/users/${id}`);
     request.flush(response);
   });
+
+  it('should delet a user DELETE', () => {
+    const id = 2;
+    const response = {};
+    service.deleteUser(id).subscribe(res => {
+      expect(res).toBe(response)
+    })
+    const request = htppTestingController.expectOne(`${url}/users/${id}`);
+    expect(request.request.method).toBe('DELETE');
+    expect(request.request.url).toBe(`${url}/users/${id}`);
+    request.flush(response);
+  });
+
 });
