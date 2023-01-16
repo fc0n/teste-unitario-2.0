@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, tick, fakeAsync } from '@angular/core/testing';
 import { of } from 'rxjs';
 import { By } from '@angular/platform-browser';
 
@@ -119,4 +119,10 @@ describe('AsynchronousComponent', () => {
       expect(logged.textContent).toBe('Logado');
     })
   });
+
+  it('Deve setar nome', fakeAsync(() => {
+    component.defineValue();
+    tick(100);
+    expect(component.name).toBe('Jessica');
+  }))
 });
