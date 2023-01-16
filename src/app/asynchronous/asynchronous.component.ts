@@ -9,6 +9,7 @@ import { HttpService } from '../service/http.service';
 })
 export class AsynchronousComponent implements OnInit {
   data: any;
+  dataPromise: any;
 
   constructor(private http: HttpService) { }
 
@@ -18,6 +19,12 @@ export class AsynchronousComponent implements OnInit {
   getUsers() {
     this.http.getUsers().subscribe(res => {
       this.data = res;
+    })
+  }
+
+  getUsersWithPromise() {
+    this.http.getUsersWithPromise().then(res => {
+      this.dataPromise = res;
     })
   }
 

@@ -127,4 +127,35 @@ describe('HttpService', () => {
     expect(request.request.headers.has('Authorization')).toEqual(true)
   });
 
+  it('should make call GET with headers to get users', () => {
+    const response = [
+      {
+        "id": 1,
+        "name": "Carlos",
+        "email": "carlos@gmail.com",
+        "age": 30
+      },
+      {
+        "id": 2,
+        "name": "Julia",
+        "email": "julia@gmail.com",
+        "age": 18
+      },
+      {
+        "id": 3,
+        "name": "Marina",
+        "email": "marina@gmail.com",
+        "age": 22
+      }
+    ];
+    service.getUsersWithPromise().then(() => {});
+    const request = htppTestingController.expectOne(`${url}/users`);
+    service.getUsersWithPromise().then(res => {
+      expect(res).toBe(response)
+    })
+    expect(request.request.method).toBe('GET');
+    expect(request.request.url).toBe(`${url}/users`);
+    request.flush(response);
+  });
+
 });

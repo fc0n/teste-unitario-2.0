@@ -61,4 +61,36 @@ describe('AsynchronousComponent', () => {
     component.getUsers();
     expect(component.data).toEqual(response);
   })
+
+  it('should make call to get list of users with promise', async() => {
+    const response = [
+      {
+        "name": "Danilo 2",
+        "email": "danilo@gmail.com",
+        "age": "30",
+        "id": 1
+      },
+      {
+        "id": 3,
+        "name": "Joao",
+        "email": "joao@gmail.com",
+        "age": 22
+      },
+      {
+        "id": 4,
+        "name": "Joao",
+        "email": "joao@gmail.com",
+        "age": 22
+      },
+      {
+        "id": 0.8230837961873159,
+        "name": "Danilo ",
+        "email": "danilo@gmail.com",
+        "age": "30"
+      }
+    ]
+    spyOn(http, 'getUsersWithPromise').and.returnValue(Promise.resolve(response));
+    await component.getUsersWithPromise();
+    expect(component.dataPromise).toEqual(response);
+  });
 });
