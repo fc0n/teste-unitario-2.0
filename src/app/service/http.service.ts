@@ -20,4 +20,8 @@ export class HttpService {
   postUser(user: any) {
     return this.http.post(`${this.url}/users`, user)
   }
+
+  putUser(id: number, user: any){
+    return this.http.put(`${this.url}/users/${id}`, user)
+  }
 }

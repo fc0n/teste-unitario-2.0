@@ -94,4 +94,17 @@ describe('HttpService', () => {
     expect(request.request.method).toBe('POST');
     request.flush(response);
   });
+
+  it('should update a user PUT', () => {
+    const id = 1;
+    const user = {"name":"Rafeal","email":"rafael@gmail.com","age":"22"}
+    const response = {"name":"Rafeal","email":"rafael@gmail.com","age":"22"}
+    service.putUser(id, user).subscribe(res => {
+      expect(res).toBe(response)
+    })
+    const request = htppTestingController.expectOne(`${url}/users/${id}`);
+    expect(request.request.method).toBe('PUT');
+    expect(request.request.url).toBe(`${url}/users/${id}`);
+    request.flush(response);
+  });
 });

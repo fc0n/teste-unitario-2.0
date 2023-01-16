@@ -35,15 +35,22 @@ describe('RequestComponent', () => {
     expect(spiedComponent).toHaveBeenCalledTimes(1);
   });
 
-  it("shloud call getUsers", () => {
+  it("should call getUsers", () => {
     let spiedComponent  = spyOn(component, 'getUsers').and.callThrough();
     component.getUsers();
     expect(spiedComponent).toHaveBeenCalledTimes(1);
   });
 
-  it("shloud create a user postUsers", () => {
+  it("should create a user postUsers", () => {
     let spiedComponent  = spyOn(component, 'postUsers').and.callThrough();
     component.postUsers();
+    expect(spiedComponent).toHaveBeenCalledTimes(1);
+  });
+
+  it("should update a user putUsers", () => {
+    let spiedComponent  = spyOn(component, 'putUsers').and.callThrough();
+    const id = 1;
+    component.putUsers(id);
     expect(spiedComponent).toHaveBeenCalledTimes(1);
   });
 

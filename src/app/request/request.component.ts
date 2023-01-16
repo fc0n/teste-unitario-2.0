@@ -35,4 +35,13 @@ export class RequestComponent implements OnInit {
     this.http.postUser(user).subscribe();
   }
 
+  putUsers(id: any) {
+    const user = {
+      name: this.name,
+      email: this.email,
+      age: this.age
+    }
+    this.http.putUser(id, user).subscribe();
+  }
+
 }
