@@ -1,4 +1,4 @@
-import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
 import { of } from 'rxjs';
 
@@ -6,6 +6,8 @@ import { SpyonServiceService } from './spyon-service.service';
 
 describe('SpyonServiceService', () => {
   let service: SpyonServiceService;
+  let htppTestingController: HttpTestingController;
+  let url: any;
   const logger = jasmine.createSpy("log");
   const status = jasmine.createSpyObj('service', ['name', 'age', 'email']);
 
@@ -14,6 +16,8 @@ describe('SpyonServiceService', () => {
       imports: [HttpClientTestingModule]
     });
     service = TestBed.inject(SpyonServiceService);
+    htppTestingController = TestBed.inject(HttpTestingController);
+    url = 'http://localhost:3000'
   });
 
   it('should be created', () => {
@@ -48,5 +52,36 @@ describe('SpyonServiceService', () => {
     expect(status.name).toHaveBeenCalledWith('Jean');
     expect(status.email).toHaveBeenCalledWith('jean.gabriel@gmail.com');
     expect(status.age).toHaveBeenCalledWith('30');
-  })
+  });
+
+  it('should perform GET call to get users', () => {
+    const response = [
+      {
+        "id": 1,
+        "name": "Carlos",
+        "email": "carlos@gmail.com",
+        "age": 30
+      },
+      {
+        "id": 2,
+        "name": "Julia",
+        "email": "julia@gmail.com",
+        "age": 18
+      },
+      {
+        "id": 3,
+        "name": "Marina",
+        "email": "marina@gmail.com",
+        "age": 22
+      }
+    ];
+    service.getUsers().subscribe();
+    const request = htppTestingController.expectOne(`${url}/users`);
+    service.getUsers().subscribe(res => {
+      expect(res).toBe(response)
+    });
+    expect(request.request.method).toBe('GET');
+    expect(request.request.url).toBe(`${url}/users`);
+    request.flush(response);
+  });
 });

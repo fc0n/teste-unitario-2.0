@@ -14,6 +14,10 @@ export class RequestComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getUsers() {
+    this.http.getUsers().subscribe();
+  }
+
   getUsersById(id: number) {
     this.http.getUsersById(id).subscribe();
   }

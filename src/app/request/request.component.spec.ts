@@ -30,4 +30,10 @@ describe('RequestComponent', () => {
     component.getUsersById(id);
     expect(spiedComponent).toHaveBeenCalledTimes(1);
   });
+
+  it("shloud call getUsers", () => {
+    let spiedComponent  = spyOn(component, 'getUsers').and.callThrough();
+    component.getUsers();
+    expect(spiedComponent).toHaveBeenCalledTimes(1);
+  });
 });
