@@ -38,4 +38,15 @@ describe('AppComponent', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('h1')?.textContent).toContain('Teste Unitario / Jasmine e Karma');
   });
+
+  it('should set value for user', () => {
+    component.ngOnInit();
+    expect(component.user).toBeDefined();
+  });
+
+  it("Deve listar usuario por id getUsersById", () => {
+    let spiedComponent  = spyOn(component, 'getUserMessage').and.callThrough();
+    component.getUserMessage('Mensagem enviada com sucesso!');
+    expect(spiedComponent).toHaveBeenCalledTimes(1);
+  })
 });

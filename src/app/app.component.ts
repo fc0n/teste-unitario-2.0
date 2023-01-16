@@ -1,10 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'teste-unitarios';
+  user: any;
+
+  constructor() {
+  }
+
+  ngOnInit(): void {
+    this.user = { name: 'Jean', email: 'jean.gabriel@gmail.com', password: '091011' }
+  }
+
+  getUserMessage(event: any) {
+    console.log('Mensagem do filho: ', event)
+  }
 }

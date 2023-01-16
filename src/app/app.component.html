@@ -22,7 +22,11 @@
 
 <!-- <app-handle-event></app-handle-event> -->
 
+<!-- <app-fill-form></app-fill-form> -->
+
 <h1>Teste Unitario / Jasmine e Karma</h1>
 
-<app-fill-form></app-fill-form>
+<app-input-output
+[user]="user"
+(userMessage)="getUserMessage($event)"></app-input-output>
 <router-outlet></router-outlet>
