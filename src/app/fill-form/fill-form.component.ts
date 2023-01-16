@@ -7,6 +7,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./fill-form.component.scss']
 })
 export class FillFormComponent implements OnInit {
+  //name!: 'Jean';
   name!: string;
   form!: FormGroup;
 
@@ -23,7 +24,7 @@ export class FillFormComponent implements OnInit {
       name: this.name
     })
 
-    console.log(this.form)
+    //console.log(this.form)
   }
 
 }

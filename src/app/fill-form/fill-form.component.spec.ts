@@ -24,10 +24,17 @@ describe('FillFormComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('Deve prencher campos do formulario', () => {
+  it('should fill in form fields', () => {
     let input = fixture.debugElement.query(By.css('input')).nativeElement
     input.value = 'Jean';
     input.dispatchEvent(new Event('input'));
     expect(input.value).toBe('Jean');
   });
+
+  it('should fill out form', () => {
+    component.name = 'Jean'
+    component.fillForm();
+    fixture.detectChanges();
+    expect(component.form.controls['name'].value).toBeDefined();
+  })
 });
