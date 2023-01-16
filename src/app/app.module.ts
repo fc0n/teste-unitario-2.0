@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { SpyonComponent } from './spyon/spyon.component';
 import { RequestComponent } from './request/request.component';
 import { MockServiceComponent } from './mock-service/mock-service.component';
+import { AsynchronousComponent } from './asynchronous/asynchronous.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { MockServiceComponent } from './mock-service/mock-service.component';
     SpyonComponent,
     RequestComponent,
     MockServiceComponent,
+    AsynchronousComponent,
   ],
   imports: [
     BrowserModule,
