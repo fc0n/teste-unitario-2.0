@@ -22,8 +22,8 @@ describe('FixtureDetectChangeComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('Deve rederizar titulo: Aprendendo a usar fixture.detectChange()', () => {
+  it('should render title: Usando fixture.detectChange()', () => {
     let title = fixture.debugElement.query(By.css('h1')).nativeElement
     expect(title.textContent).toBe('Usando fixture.detectChange()');
-  })
+  });
 });
