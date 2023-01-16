@@ -15,6 +15,7 @@ import { RequestComponent } from './request/request.component';
 import { MockServiceComponent } from './mock-service/mock-service.component';
 import { AsynchronousComponent } from './asynchronous/asynchronous.component';
 import { TestingComponent } from './testing/testing.component';
+import { FixtureDetectChangeComponent } from './fixture-detect-change/fixture-detect-change.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { TestingComponent } from './testing/testing.component';
     MockServiceComponent,
     AsynchronousComponent,
     TestingComponent,
+    FixtureDetectChangeComponent,
   ],
   imports: [
     BrowserModule,
