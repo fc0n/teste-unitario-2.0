@@ -7,3 +7,11 @@
 
 <button (click)="getUsers()">Fazer chamada Assíncona Subscribe</button>
 <button (click)="getUsers()">Fazer chamada Assíncona Promise</button>
+
+<br>
+<br>
+
+<div *ngIf="isLogged" class="logged">Logado</div>
+<div *ngIf="!isLogged" class="logged-out">Deslogado</div>
+
+<button (click)="isAuthenticaded()">Logar no sistema</button>

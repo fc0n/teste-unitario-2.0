@@ -10,6 +10,7 @@ import { HttpService } from '../service/http.service';
 export class AsynchronousComponent implements OnInit {
   data: any;
   dataPromise: any;
+  isLogged: any;
 
   constructor(private http: HttpService) { }
 
@@ -25,6 +26,12 @@ export class AsynchronousComponent implements OnInit {
   getUsersWithPromise() {
     this.http.getUsersWithPromise().then(res => {
       this.dataPromise = res;
+    })
+  }
+
+  isAuthenticaded() {
+    this.http.isAuthenticated().then(res => {
+      this.isLogged = res;
     })
   }
 

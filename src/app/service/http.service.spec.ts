@@ -158,4 +158,13 @@ describe('HttpService', () => {
     request.flush(response);
   });
 
+  it('should return that user is authenticated', (done: DoneFn) => {
+    const response = true;
+    service.isAuthenticated().then(() => {});
+    service.isAuthenticated().then(res => {
+      expect(res).toBe(response)
+      done();
+    });
+  });
+
 });
