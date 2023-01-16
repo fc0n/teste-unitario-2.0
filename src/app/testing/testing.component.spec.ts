@@ -23,7 +23,12 @@ describe('TestingComponent', () => {
   });
 
   it('should access element DOM with debugElement.query()', () => {
-    let title = fixture.debugElement.nativeElement.querySelector('h1');
+    let title = fixture.debugElement.query(By.css('h1')).nativeElement
+    expect(title.textContent).toBe('Trabalhando com debugElement.query() e nativeElement.querySelector()');
+  });
+
+  it('should access element DOM with nativeElement.querySelector()', () => {
+    let title = fixture.debugElement.nativeElement.querySelector('h1')
     expect(title.textContent).toBe('Trabalhando com debugElement.query() e nativeElement.querySelector()');
   });
 
