@@ -16,4 +16,8 @@ export class HttpService {
   getUsersById(id: number) {
     return this.http.get(`${this.url}/users/${id}`)
   }
+
+  postUser(user: any) {
+    return this.http.post(`${this.url}/users`, user)
+  }
 }

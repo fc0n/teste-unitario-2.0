@@ -8,6 +8,9 @@ import { HttpService } from '../service/http.service';
   styleUrls: ['./request.component.scss']
 })
 export class RequestComponent implements OnInit {
+  name!: string;
+  email!: string;
+  age!: string;
 
   constructor(private http: HttpService) { }
 
@@ -20,6 +23,16 @@ export class RequestComponent implements OnInit {
 
   getUsersById(id: number) {
     this.http.getUsersById(id).subscribe();
+  }
+
+  postUsers() {
+    const user = {
+      id: Math.random(),
+      name: this.name,
+      email: this.email,
+      age: this.age
+    }
+    this.http.postUser(user).subscribe();
   }
 
 }
