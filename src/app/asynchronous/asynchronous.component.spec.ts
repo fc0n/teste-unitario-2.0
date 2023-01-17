@@ -120,7 +120,7 @@ describe('AsynchronousComponent', () => {
     })
   });
 
-  it('Deve setar nome', fakeAsync(() => {
+  it('should set name', fakeAsync(() => {
     component.defineValue();
     tick(100);
     expect(component.name).toBe('Jessica');

@@ -23,7 +23,7 @@ describe('TestingDirectiveComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('Deve alterar background quando passar o mouse sobre o title', () => {
+  it('should change background when hover over title', () => {
     const title = fixture.debugElement.query(By.css('h1'));
     title.triggerEventHandler('mouseover', null);
     fixture.detectChanges();
