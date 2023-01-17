@@ -25,12 +25,12 @@ describe('GuardGuard', () => {
     expect(guard).toBeTruthy();
   });
 
-  it('Deve redirecionar usuario para pagina de login quando não tiver logado', () => {
+  it('should redirect user to login page when not logged in', () => {
     expect(guard.canActivate(routeMock, routeStateMock)).toEqual(false);
     expect(routerMock.navigate).toHaveBeenCalledWith(['/login']);
   });
 
-  it('Deve conceder acesso quando usuario tiver token', () => {
+  it('should grant access when user has token', () => {
     const token = 'iasidasdijasdhas';
     localStorage.setItem('token', token);
     expect(guard.canActivate(routeMock, routeStateMock)).toEqual(true);
