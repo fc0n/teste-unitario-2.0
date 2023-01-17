@@ -24,6 +24,8 @@ import { TestingPipesDirectiveRouteComponent } from './testing-pipes-directive-r
 import { HttpPipe } from './http.pipe';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
+import { TestingRouteComponent } from './testing-route/testing-route.component';
+import { ExtratoComponent } from './extrato/extrato.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +49,8 @@ import { LoginComponent } from './login/login.component';
     HttpPipe,
     DashboardComponent,
     LoginComponent,
+    TestingRouteComponent,
+    ExtratoComponent,
   ],
   imports: [
     BrowserModule,
